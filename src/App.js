@@ -1,10 +1,15 @@
 import Formular from "./Formular";
-import './App.css';
+import ToDoList from "./ToDoList";
+import "./App.css";
 
 function App() {
   return (
     <div className="main">
-      <h1><span>NOT</span><span>todo</span><span>LIST</span></h1>
+      <h1>
+        <span>NOT</span>
+        <span>todo</span>
+        <span>LIST</span>
+      </h1>
       <ol id="instructions">
         <li>Write down things not to do.</li>
         <li>
@@ -17,7 +22,11 @@ function App() {
       </ol>
       {/* The form component goes here */}
       <Formular />
-      <i className="license">icons by fontawesome -  <a href="https://fontawesome.com/license">license</a></i>
+      <ToDoList />
+      <i className="license">
+        icons by fontawesome -{" "}
+        <a href="https://fontawesome.com/license">license</a>
+      </i>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import Formular from "./Formular";
 import './App.css';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         </li>
       </ol>
       {/* The form component goes here */}
-      {/* <Form /> */}
+      <Formular />
       <i className="license">icons by fontawesome -  <a href="https://fontawesome.com/license">license</a></i>
     </div>
   );

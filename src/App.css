@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+.main {
+  max-width: 50rem;
+  background-color: var(--colorRed);
+  text-align: left;
+  margin: 2em auto;
+  padding: 2em 9em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main h1 {
+  text-transform: capitalize;
+  color: var(--colorWhite);
+  font-size: 2em;
+  line-height: 1.6em;
+  font-family: var(--font_Rubik);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.main > h1 > span {
+  display: block;
+}
+
+.main > h1 > span:nth-child(2) {
+  color: var(--colorGreen);
+  text-transform: lowercase;
+  font-size: 2em;
+  margin: -13px 0px -11px -4px;
+}
+
+#instructions {
+  color: var(--colorWhite);
+  font-size: 0.9rem;
+  padding: 0;
+  list-style-position: inside;
+  max-width: 380px;
+}
+
+.main p {
+  font-size: 0.9em;
+  color: var(--colorPaleRed);
+  margin: 2em 0 0 0;
+}
+
+/* responsive Styling for Mobile devices*/
+@media only screen and (max-width: 768px) {
+  .main {
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* liscense information and link to the websites */
+.license {
+  margin-top: 6em;
+  display: block;
+  color: var(--colorDarkRed);
+  text-align: right;
+  font-size: 0.8em;
+  width: 100%;
+  opacity: 0.8;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.license > a {
+  color: inherit;
 }

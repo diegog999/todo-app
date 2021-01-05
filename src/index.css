@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+}
+:root {
+  --colorGreen: #93e24e;
+  --colorWhite: white;
+  --colorRed: #e66161;
+  --colorDarkRed: #6a1111;
+  --colorPaleRed: #e9c0c0;
+  --font_Roboto: "Roboto Slab", serif;
+  --font_Rubik: "Rubik", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* fontsinfo: https://fonts.google.com/specimen/Roboto+Slab?query=roboto+slab&sidebar.open=true&selection.family=Roboto+Slab:wght@400;700|Rubik:wght@700   
+"Rubik" is for Bold 700 for the Titel 
+"Roboto slab" is for Bold 700 and Regular 400 
+*/
+
+html {
+  font-family: var(--font_Roboto);
+  font-size: 16px;
+}
+
+body {
+  text-align: center;
+  margin: 0;
 }

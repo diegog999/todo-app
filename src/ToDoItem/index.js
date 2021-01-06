@@ -1,14 +1,12 @@
 import React from "react";
 import "./styles.css";
-import DeleteBttn from "../deleteBttn";
-import EditBttn from "../editBttn";
 
 export default function ToDoItem() {
   return (
     <li id="">
       <span class="text">Skip morning coffee</span>
-      <EditBttn />
-      <DeleteBttn />
+      <span className="bttn edit"></span>
+      <span className="bttn delete"></span>
     </li>
   );
 }

@@ -1,0 +1,7 @@
+.text {
+  padding: 0em 1em;
+  flex-grow: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}

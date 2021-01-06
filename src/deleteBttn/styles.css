@@ -1,0 +1,19 @@
+.bttn {
+  display: block;
+  width: 2.5em;
+  background-size: 1em;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.delete {
+  background-image: url(./trash-solid.svg);
+  border-radius: 0 6px 6px 0;
+  background-size: 0.9em;
+}
+
+.bttn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

@@ -24,3 +24,19 @@
   box-shadow: rgba(0, 0, 0, 0.5) 0px 14px 28px, rgba(0, 0, 0, 0.5) 0px 5px 5px;
   transition: all 0.25s;
 }
+
+#task-list > li.checked {
+  background-color: rgba(125, 77, 77, 0.5) !important;
+  padding: 0 0 0 40px;
+  opacity: 0.7;
+}
+
+#task-list > li.checked > .text {
+  text-decoration: line-through;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+#task-list > li.checked > .edit {
+  display: none;
+}

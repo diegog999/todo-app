@@ -1,8 +1,11 @@
+import React, {useState} from "react";
 import Formular from "./Formular";
 import ToDoList from "./ToDoList";
 import "./App.css";
 
 function App() {
+  /* let toDoList = [{id: "1", title: "bla"}, {id: "1", tilte: "blubb"}, {id: "1", tilte: "blubber"}]; */
+
   return (
     <div className="main">
       <h1>
@@ -20,8 +23,7 @@ function App() {
           If you successfully avoided doing said thing, cross it of your list.
         </li>
       </ol>
-      {/* The form component goes here */}
-      <Formular />
+      <Formular toDoList={toDoList}/>
       <ToDoList />
       <i className="license">
         icons by fontawesome -{" "}

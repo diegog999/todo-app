@@ -6,7 +6,7 @@ import EditBttn from "../editBttn";
 export default function ToDoItem() {
   return (
     <li id="">
-      <span class="text">Skip morning coffee</span>
+      <span className="text">Skip morning coffee</span>
       <EditBttn />
       <DeleteBttn />
     </li>

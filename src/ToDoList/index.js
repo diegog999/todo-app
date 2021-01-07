@@ -4,7 +4,7 @@ import "./styles.css";
 
 export default function ToDoList() {
 
-  let [list, listUpdater] = useState();
+  /* let [list, listUpdater] = useState(); */
   
   return (
     <div>

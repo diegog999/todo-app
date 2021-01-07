@@ -2,21 +2,24 @@ import React, { useState } from "react";
 import Submitbttn from "../Submitbttn/index.js";
 import "./style.css";
 
-export default function Formular({ description, toDoList }) {
+export default function Formular({ toDoList, setToDoList }) {
 
   let [inputValue, setInputValue] = useState();
 
-  const addToDo = (toDoText) => { 
-    const id = Date.now();
-    const newToDos = [...list, {title: toDoText, id: id}]
-    listUpdater(newToDos);
+  const addToDo = (toDoTitle) => { 
+    const newToDo = {id: Date.now(), title: toDoTitle}
+    const newToDos = [...toDoList, newToDo]
+    setToDoList(newToDos);
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     /* is the input field empty? yes. do nothing! */
-    if(!inputValue) return;
-    addToDo(inputValue);
+    if(!inputValue || inputValue.trim() === "") {
+      alert("Please type in something you do not want to do.");
+    } else {
+      addToDo(inputValue);
+    }
     setInputValue("");
   }
 
@@ -28,7 +31,7 @@ export default function Formular({ description, toDoList }) {
           type="text" 
           name="task" 
           id="task" 
-          laceholder="your Task" 
+          placeholder="your Task" 
           value={inputValue}
           onChange={e => setInputValue(e.target.value)}
         />

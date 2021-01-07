@@ -1,10 +1,18 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import Formular from "./Formular";
 import ToDoList from "./ToDoList";
 import "./App.css";
 
 function App() {
-  /* let toDoList = [{id: "1", title: "bla"}, {id: "1", tilte: "blubb"}, {id: "1", tilte: "blubber"}]; */
+  const [toDoList, setToDoList] = useState(
+    [
+      {id: "1", title: "Talk about our lord and savior Jesus Christ"},
+      {id: "2", title: "Deactivate addblocker"},
+      {id: "3", title: "Accept all cookies"},
+      {id: "4", title: "Take part in a survey"},
+      {id: "5", title: "Skip morning coffee"}
+    ]
+  )
 
   return (
     <div className="main">
@@ -23,8 +31,8 @@ function App() {
           If you successfully avoided doing said thing, cross it of your list.
         </li>
       </ol>
-      <Formular toDoList={toDoList}/>
-      <ToDoList />
+      <Formular toDoList={toDoList} setToDoList={setToDoList} />
+      <ToDoList toDoList={toDoList} setToDoList={setToDoList} />
       <i className="license">
         icons by fontawesome -{" "}
         <a href="https://fontawesome.com/license">license</a>

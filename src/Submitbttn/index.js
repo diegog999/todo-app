@@ -2,5 +2,5 @@ import React from "react";
 import "./style.css";
 
 export default function Submitbttn() {
-  return <button id="add">Add</button>;
+  return <button id="add" type="submit">Add</button>;
 }

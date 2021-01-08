@@ -1,10 +1,10 @@
 import React from "react";
 import "./styles.css";
 
-export default function ToDoItem({ todoList, handleDelete }) {
+export default function ToDoItem({ toDo, handleDelete }) {
   return (
-    <li id="1">
-      <span class="text">Skip morning coffee</span>
+    <li key={toDo.id}>
+      <span class="text">{toDo.title}</span>
       <span className="bttn edit"></span>
       <span
         className="bttn delete"

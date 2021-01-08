@@ -8,10 +8,14 @@ export default function ToDoList({ toDoList, setToDoList }) {
     toDoList.forEach((todo, index) => {
       //find index from List
       if (parseInt(todo.id) === parseInt(todoId)) {
-
         toDoList.splice(index, 1);
       }
     });
+    setToDoList([...toDoList]);
+  };
+  const editing = (id, newTitle) => {
+    const index = toDoList.findIndex((task) => task.id === id);
+    toDoList[index].title = newTitle;
     setToDoList([...toDoList]);
   };
 

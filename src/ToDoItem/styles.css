@@ -38,3 +38,14 @@
   background-size: 0.9em;
   border-radius: 0 6px 6px 0;
 }
+
+input.text {
+  font-size: inherit;
+  font-family: inherit;
+  border: unset;
+  background: unset;
+  align-self: center;
+  margin: 0em 1em;
+  padding: 0;
+  border-bottom: solid rgb(143, 134, 134) 1px;
+}

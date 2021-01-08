@@ -13,12 +13,18 @@ export default function ToDoList({ toDoList, setToDoList }) {
     });
     setToDoList([...toDoList]);
   };
-  const editing = (id, newTitle) => {
-    const index = toDoList.findIndex((task) => task.id === id);
-    toDoList[index].title = newTitle;
-    setToDoList([...toDoList]);
-  };
 
+  const handleCheck = (e) => {
+    const todoId = e.target.parentNode.id;
+    toDoList.forEach((todo, index) => {
+      //find index from List
+      if (parseInt(todo.id) === parseInt(todoId)) {
+        toDoList[index].checked = !toDoList[index].checked;
+      }
+    });
+    setToDoList([...toDoList]);
+    console.log(toDoList);
+  };
   return (
     <div>
       <p>Things not to do:</p>
@@ -27,10 +33,9 @@ export default function ToDoList({ toDoList, setToDoList }) {
           return (
             <ToDoItem
               toDo={toDo}
+              checked={toDo.checked}
               handleDelete={handleDelete}
-              editTaskHandler={(title) => {
-                editing(toDo.id, title);
-              }}
+              handleCheck={handleCheck}
             />
           );
         })}

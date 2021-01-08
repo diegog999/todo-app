@@ -1,20 +1,40 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-export default function ToDoItem({ toDo, handleDelete }) {
+export default function ToDoItem({
+  toDo,
+  handleDelete,
+  handleEdit,
+  handleCheck,
+}) {
   const [edit, setEdit] = useState(false);
-  const [input, setInput] = useState(toDo.title);
-
-  const editHandler = () => {
-    setEdit(true);
-  };
+  const [input, setInput] = useState();
+  const [check, setChecked] = useState(toDo.checked);
+  console.log(check);
   return (
     <>
-      <li id={toDo.id} key={toDo.id}>
+      <li
+        className={`${toDo.checked ? "checked" : ""}`}
+        id={toDo.id}
+        key={toDo.id}
+      >
         {!edit ? (
           <>
-            <span className="text">{toDo.title}</span>
-            <span className="bttn edit"></span>
+            <span
+              className="text"
+              onClick={(e) => {
+                handleCheck(e);
+              }}
+            >
+              {toDo.title}
+            </span>
+            <span
+              className="bttn edit"
+              onClick={() => {
+                setEdit(true);
+                setInput(toDo.title);
+              }}
+            ></span>
             <span
               className="bttn delete"
               onClick={(e) => {
@@ -39,7 +59,7 @@ export default function ToDoItem({ toDo, handleDelete }) {
             <span
               className="bttn abort"
               onClick={() => {
-                setEdit(false);
+                handleEdit(toDo.id, input);
                 setInput(toDo.title);
               }}
             ></span>

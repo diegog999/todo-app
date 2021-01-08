@@ -24,7 +24,15 @@ export default function ToDoList({ toDoList, setToDoList }) {
       <p>Things not to do:</p>
       <ul id="task-list">
         {toDoList.map((toDo) => {
-          return <ToDoItem toDo={toDo} handleDelete={handleDelete} />;
+          return (
+            <ToDoItem
+              toDo={toDo}
+              handleDelete={handleDelete}
+              editTaskHandler={(title) => {
+                editing(toDo.id, title);
+              }}
+            />
+          );
         })}
       </ul>
     </div>

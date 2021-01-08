@@ -10,7 +10,7 @@ export default function ToDoItem({ toDo, handleDelete }) {
   };
   return (
     <>
-      <li key={toDo.id}>
+      <li id={toDo.id} key={toDo.id}>
         {!edit ? (
           <>
             <span className="text">{toDo.title}</span>

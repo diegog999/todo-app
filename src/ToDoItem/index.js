@@ -59,7 +59,7 @@ export default function ToDoItem({
             <span
               className="bttn abort"
               onClick={() => {
-                handleEdit(toDo.id, input);
+                setEdit(false);
                 setInput(toDo.title);
               }}
             ></span>

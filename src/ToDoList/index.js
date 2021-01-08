@@ -9,7 +9,9 @@ export default function ToDoList({ toDoList }) {
     <div>
       <p>Things not to do:</p>
       <ul id="task-list">
-        <ToDoItem toDoList={toDoList}/>
+        {toDoList.map(toDo => {
+          return <ToDoItem toDo={toDo}/>
+        })}
       </ul>
     </div>
   );

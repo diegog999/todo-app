@@ -1,16 +1,14 @@
 import React from "react";
 import "./styles.css";
 
-export default function ToDoItem({ toDoList }) {
+export default function ToDoItem({ toDo }) {
   return (
     <>
-      {toDoList.map((toDo) => (
-        <li key={toDo.id}>
-          <span className="text">{toDo.title}</span>
-          <span className="bttn edit"></span>
-          <span className="bttn delete"></span>
-        </li>
-      ))}
+      <li key={toDo.id}>
+        <span className="text">{toDo.title}</span>
+        <span className="bttn edit"></span>
+        <span className="bttn delete"></span>
+      </li>
     </>
   );
 }

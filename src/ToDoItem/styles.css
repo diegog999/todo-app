@@ -29,3 +29,12 @@
 .bttn:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+.confirm {
+  background-image: url(../img/check-solid.svg);
+}
+.abort {
+  background-image: url(../img/times-solid.svg);
+  background-size: 0.9em;
+  border-radius: 0 6px 6px 0;
+}

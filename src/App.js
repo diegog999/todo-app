@@ -1,18 +1,16 @@
-import {useState} from "react";
+import { useState } from "react";
 import Formular from "./Formular";
 import ToDoList from "./ToDoList";
 import "./App.css";
 
 function App() {
-  const [toDoList, setToDoList] = useState(
-    [
-      {id: "1", title: "Talk about our lord and savior Jesus Christ"},
-      {id: "2", title: "Deactivate addblocker"},
-      {id: "3", title: "Accept all cookies"},
-      {id: "4", title: "Take part in a survey"},
-      {id: "5", title: "Skip morning coffee"}
-    ]
-  )
+  const [toDoList, setToDoList] = useState([
+    { id: "1", title: "Talk about our lord and savior Jesus Christ" },
+    { id: "2", title: "Deactivate addblocker" },
+    { id: "3", title: "Accept all cookies" },
+    { id: "4", title: "Take part in a survey" },
+    { id: "5", title: "Skip morning coffee" },
+  ]);
 
   return (
     <div className="main">

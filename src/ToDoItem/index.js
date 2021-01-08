@@ -3,7 +3,7 @@ import "./styles.css";
 
 export default function ToDoItem({ toDo, handleDelete }) {
   return (
-    <li key={toDo.id}>
+    <li id={toDo.id} key={toDo.id}>
       <span className="text">{toDo.title}</span>
       <span className="bttn edit"></span>
       <span

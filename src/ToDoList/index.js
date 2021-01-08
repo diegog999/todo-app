@@ -5,14 +5,14 @@ import "./styles.css";
 export default function ToDoList({ toDoList, setToDoList }) {
   const handleDelete = (e) => {
     const todoId = e.target.parentNode.id;
-    const newArr = toDoList;
-    toDoList.map((todo, index) => {
+    toDoList.forEach((todo, index) => {
       //find index from List
-      if (todo.id === todoId) {
-        return newArr.splice(index, 1);
+      if (parseInt(todo.id) === parseInt(todoId)) {
+
+        toDoList.splice(index, 1);
       }
     });
-    setToDoList(newArr); //delete element from List
+    setToDoList([...toDoList]);
   };
 
   return (

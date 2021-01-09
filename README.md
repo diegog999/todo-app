@@ -25,15 +25,12 @@
 | Name                | Github                                    |
 | ------------------- | ----------------------------------------- |
 | Diego Scaro         | [diegog999](https://github.com/diegog999) |
-| Eric Aina           | [eaina](https://github.com/)              |
 | Janis Jeanne Merkel | [widukin](https://github.com/widukin)     |
 | Stefan Klarmann     | [klarmann1](https://github.com/klarmann1) |
 
 ---
 
-![Wireframe](url when images is uploaded)
-
-Mockup: ![Mockup](https://raw.githubusercontent.com/klarmann1/ToDo-List/dev/img/todo-mockup.png)
+Mockup: ![Mockup](https://raw.githubusercontent.com/diegog999/todo-app/dev/src/img/todo-mockup.png)
 
 ---
 

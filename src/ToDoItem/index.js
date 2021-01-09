@@ -42,7 +42,7 @@ export default function ToDoItem({ toDo, handleDelete, handleCheck }) {
           </>
         ) : (
           <>
-            {/* Editable Element with confirm- and abort-button */}
+            {/* Editable List-Item with input-field, confirm- and abort-button */}
             <input
               className="text"
               value={input}

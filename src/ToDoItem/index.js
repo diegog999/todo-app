@@ -1,25 +1,21 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-export default function ToDoItem({
-  toDo,
-  handleDelete,
-  handleEdit,
-  handleCheck,
-}) {
+export default function ToDoItem({ toDo, handleDelete, handleCheck }) {
   const [edit, setEdit] = useState(false);
   const [input, setInput] = useState();
-  const [check, setChecked] = useState(toDo.checked);
-  console.log(check);
   return (
     <>
       <li
+        //depending on checked(true/false), li-class changes to "checked"
         className={`${toDo.checked ? "checked" : ""}`}
         id={toDo.id}
         key={toDo.id}
       >
+        {/* depending on edit(true/false), returns span-element with title when edit=false, returns input-field when edit=true */}
         {!edit ? (
           <>
+            {/* Non-Editable List-Item: can be marked as checked by clicking on text-span, edited and deleted */}
             <span
               className="text"
               onClick={(e) => {
@@ -28,6 +24,7 @@ export default function ToDoItem({
             >
               {toDo.title}
             </span>
+            {/* Edit-Button */}
             <span
               className="bttn edit"
               onClick={() => {
@@ -35,6 +32,7 @@ export default function ToDoItem({
                 setInput(toDo.title);
               }}
             ></span>
+            {/* Delete-Button */}
             <span
               className="bttn delete"
               onClick={(e) => {
@@ -44,11 +42,13 @@ export default function ToDoItem({
           </>
         ) : (
           <>
+            {/* Editable Element with confirm- and abort-button */}
             <input
               className="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
             />
+            {/* Confirm-Button: sets todo-Title to value of input-field */}
             <span
               className="bttn confirm"
               onClick={() => {
@@ -56,6 +56,7 @@ export default function ToDoItem({
                 setEdit(false);
               }}
             ></span>
+            {/* Abort-Button: sets input-field-value to todo-Title */}
             <span
               className="bttn abort"
               onClick={() => {
@@ -69,16 +70,3 @@ export default function ToDoItem({
     </>
   );
 }
-
-// return (
-//   <li id={toDo.id} key={toDo.id}>
-//     <span className="text">{toDo.title}</span>
-//     <span className="bttn edit"></span>
-//     <span
-//       className="bttn delete"
-//       onClick={(e) => {
-//         handleDelete(e);
-//       }}
-//     ></span>
-//   </li>
-// );

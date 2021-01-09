@@ -5,6 +5,7 @@ import "./App.css";
 
 function App() {
   const [toDoList, setToDoList] = useState([
+    // Demo-ToDos
     { id: "1", title: "Talk about our lord and savior Jesus Christ" },
     { id: "2", title: "Deactivate addblocker" },
     { id: "3", title: "Accept all cookies" },

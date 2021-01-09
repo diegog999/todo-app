@@ -3,6 +3,7 @@ import ToDoItem from "../ToDoItem";
 import "./styles.css";
 
 export default function ToDoList({ toDoList, setToDoList }) {
+  //Delete Handler - deleting ToDo-Item of list
   const handleDelete = (e) => {
     const todoId = e.target.parentNode.id;
     toDoList.forEach((todo, index) => {
@@ -14,16 +15,15 @@ export default function ToDoList({ toDoList, setToDoList }) {
     setToDoList([...toDoList]);
   };
 
+  //Check Handler - changes checked-prop to true/false
   const handleCheck = (e) => {
     const todoId = e.target.parentNode.id;
     toDoList.forEach((todo, index) => {
-      //find index from List
       if (parseInt(todo.id) === parseInt(todoId)) {
         toDoList[index].checked = !toDoList[index].checked;
       }
     });
     setToDoList([...toDoList]);
-    console.log(toDoList);
   };
   return (
     <div>
